@@ -19,7 +19,12 @@ escudos = {
 }
 cols = st.columns(len(escudos))
 
-for i, (equipo, url) in enumerate(escudos.items()):
-    cols[i].image(url, width=100)
+for i, (equipo, info) in enumerate(escudos.items()):
+    cols[i].image(info["url"], width=100)
     if cols[i].button(equipo):
-        st.write(f"Has pulsado el botón de {equipo}")
+        try:
+            df = pd.read_csv(info["csv"])
+            st.write(f"### Plantilla de {equipo}")
+            st.dataframe(df)
+        except Exception as e:
+            st.error(f"No se pudo cargar la plantilla de {equipo}: {e}")
