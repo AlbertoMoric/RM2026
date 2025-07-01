@@ -1,28 +1,20 @@
 import streamlit as st
-import pandas as pd
 
-st.title("Analizador de Plantilas")
+# URL de la imagen de fondo (puedes usar una URL pública o un archivo local con base64)
+imagen_fondo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/La_Liga_logo.svg/1200px-La_Liga_logo.svg.png"
 
-# Ruta relativa al CSV
-#ruta_csv = "data.csv"
+page_bg_img = f"""
+<style>
+.stApp {{
+  background-image: url("{imagen_fondo_url}");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}}
+</style>
+"""
 
-# Lista de equipos y sus archivos CSV correspondientes
-equipos = {
-    "Real Madrid": "real_madrid.csv",
-    "Barcelona": "barcelona.csv",
-    "Atlético de Madrid": "atletico.csv",
-    # añade más equipos aquí
-}
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
-# Selector para el equipo
-equipo_seleccionado = st.selectbox("Selecciona un equipo", list(equipos.keys()))
-
-# Cargar CSV según equipo seleccionado
-ruta_csv = equipos[equipo_seleccionado]
-
-try:
-    df = pd.read_csv(ruta_csv)
-    st.write(f"Plantilla de {equipo_seleccionado}")
-    st.dataframe(df)
-except FileNotFoundError:
-    st.error(f"No se encontró el archivo para {equipo_seleccionado}")
+st.title("Análisis de Plantillas de Fútbol - LaLiga")
