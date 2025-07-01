@@ -13,3 +13,5 @@ cols = st.columns(len(escudos))
 
 for i, (equipo, url) in enumerate(escudos.items()):
     cols[i].image(url, width=100)
+    if cols[i].button(equipo):
+        st.write(f"Has pulsado el botón de {equipo}")
