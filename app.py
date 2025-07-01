@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Análisis de Plantillas de Fútbol - LaLiga")
+st.title("Análisis de Plantillas de Fútbol con IA")
 
 # URLs de los escudos (ejemplo con algunos equipos)
 escudos = {
