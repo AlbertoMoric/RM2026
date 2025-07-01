@@ -116,7 +116,7 @@ def render_linea(posiciones):
         if pos == "":
             cols[i].empty()
             continue
-        jugador = df[df["Posición"] == pos]
+        jugador = df[df["Posicion"] == pos]
         if not jugador.empty:
             jugador = jugador.iloc[0]
             with cols[i]:
