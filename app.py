@@ -98,3 +98,37 @@ for i, (equipo, info) in enumerate(escudos.items()):
             st.dataframe(df)
         except Exception as e:
             st.error(f"No se pudo cargar la plantilla de {equipo}: {e}")
+
+df = pd.read_csv("Data/Real Madrid.csv")  # Asegúrate de tener 'Posición' y 'Nombre'
+
+# Mapa del campo: cada fila representa una línea táctica
+campo = [
+    ["Punta Izquierda", "Punta Derecha"],
+    ["Banda Izquierda", "Interior Izquierdo", "Interior Derecho", "Banda Derecha"],
+    ["", "Pivote", ""],
+    ["Central Izquierdo", "Central", "Central Derecho"],
+    ["", "Portero", ""]
+]
+
+def render_linea(posiciones):
+    cols = st.columns(len(posiciones))
+    for i, pos in enumerate(posiciones):
+        if pos == "":
+            cols[i].empty()
+            continue
+        jugador = df[df["Posición"] == pos]
+        if not jugador.empty:
+            jugador = jugador.iloc[0]
+            with cols[i]:
+                st.image("https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png", width=60)
+                st.markdown(f"**{jugador['Nombre']}**")
+                if "Número" in jugador:
+                    st.caption(f"#{jugador['Número']}")
+        else:
+            cols[i].empty()
+
+st.write("## Formación en el campo")
+
+for fila in campo:
+    render_linea(fila)
+    st.markdown("---")
