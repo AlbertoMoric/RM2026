@@ -69,7 +69,7 @@ escudos = {
     },
     "Real Madrid": {
         "url": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
-        "csv": "data/real_madrid.csv"
+        "csv": "Data/Real Madrid.csv"
     },
     "Real Sociedad": {
         "url": "https://upload.wikimedia.org/wikipedia/en/0/0e/Real_Sociedad_logo.svg",
