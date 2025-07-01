@@ -4,9 +4,9 @@ Dorsal,Nombre,Posicion,SPosicion,Nacimiento,Extracomunitario,VMercado,Ficha
 3,Eder Militao,Central,Central Derecho,1998,NO,30,Profesional
 4,David Alaba,Central Izquierdo,Central,1992,NO,6,Profesional
 5,Jude Bellingham,Interior Izquierdo,Mediapunta,2003,NO,180,Profesional
-6,Eduardo Camavinga,
-7,Vinicius Junior,
-8,Federico Valverde,
-9,Kylian Mbappe,
-10,Luka Modric,
-11,Rodrygo,
+6,Eduardo Camavinga,Interior Izquierdo,Banda Izquierda,
+7,Vinicius Junior,Punta Izquierdo,,
+8,Federico Valverde,Interior Derecho,Banda Derecha,
+9,Kylian Mbappe,Punta Izquierdo,Punta Derecho,
+10,Luka Modric,Pivote, Interior Derecho,
+11,Rodrygo,Banda Derecha,Punta Izquierdo,
