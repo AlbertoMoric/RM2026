@@ -14,7 +14,7 @@ def mostrar_home():
     st.image(url_escudo_rm, width=150)
     if st.button("Real Madrid"):
         st.session_state.pagina = "real_madrid"
-        st.experimental_rerun()  # Recarga la app para mostrar la página nueva
+        #st.experimental_rerun()  # Recarga la app para mostrar la página nueva
 
 def mostrar_real_madrid():
     st.title("Plantilla Real Madrid")
