@@ -4,9 +4,18 @@ st.title("Analista de Plantillas Inteligente")
 
 # URLs de los escudos
 escudos = {
-    "Real Madrid": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
-    "Barcelona": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
-    "Atlético de Madrid": "https://upload.wikimedia.org/wikipedia/en/f/f4/Atletico_Madrid_2017_logo.svg",
+    "Real Madrid": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+        "csv": "Data/Real Madrid.csv"
+    },
+    "Barcelona": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+        #"csv": "Data/barcelona.csv"
+    },
+    "Atlético de Madrid": {
+        "url": "https://upload.wikimedia.org/wikipedia/en/f/f4/Atletico_Madrid_2017_logo.svg",
+        #"csv": "data/atletico.csv"
+    },
 }
 cols = st.columns(len(escudos))
 
