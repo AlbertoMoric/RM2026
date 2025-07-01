@@ -1,8 +1,7 @@
 import streamlit as st
-
+import pandas as pd
 st.title("Analista de Plantillas Inteligente")
-
-# URLs de los escudos
+#SELECCIONAR EQUIPOS
 escudos = {
     "Real Madrid": {
         "url": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
@@ -18,7 +17,6 @@ escudos = {
     },
 }
 cols = st.columns(len(escudos))
-
 for i, (equipo, info) in enumerate(escudos.items()):
     cols[i].image(info["url"], width=100)
     if cols[i].button(equipo):
